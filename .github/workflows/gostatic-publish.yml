@@ -1,0 +1,17 @@
+name: gostatic-publish
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+  repository_dispatch:
+  schedule:
+    - cron: '0 12 15 * *'
+
+jobs:
+  docker:
+    uses: ./.github/workflows/docker-publish.yml
+    with:
+      toolname: gostatic
