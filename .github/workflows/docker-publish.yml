@@ -102,6 +102,6 @@ jobs:
       - name: Create multi-arch manifest
         run: |
           docker buildx imagetools create \
-            -t ghcr.io/${{ github.repository_owner }}/strelka/${{ inputs.toolname }}:${{ needs.docker.outputs.branch }} \
-            ghcr.io/${{ github.repository_owner }}/strelka/${{ inputs.toolname }}:${{ needs.docker.outputs.branch }}-amd64 \
-            ghcr.io/${{ github.repository_owner }}/strelka/${{ inputs.toolname }}:${{ needs.docker.outputs.branch }}-arm64
+            -t ghcr.io/${{ github.repository_owner }}/${{ inputs.toolname }}:${{ needs.docker.outputs.branch }} \
+            ghcr.io/${{ github.repository_owner }}/${{ inputs.toolname }}:${{ needs.docker.outputs.branch }}-amd64 \
+            ghcr.io/${{ github.repository_owner }}/${{ inputs.toolname }}:${{ needs.docker.outputs.branch }}-arm64
